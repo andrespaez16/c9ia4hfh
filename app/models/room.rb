@@ -15,7 +15,13 @@
 class Room < ActiveRecord::Base
     validates :description, presence: true
     validates :beds, presence: true
-    validates :guests, presence: true
+    validates :guests,presence: true
+    validates :id,presence: true
+    validates :title,presence: true
+    validates :created_at,presence: true
+    validates :updated_at,presence: true
+    validates :image_url,presence: true
+
     validates :description, length: { maximum: 400 }  
     validates :beds, numericality: { only_integer: true }
     validates :guests, numericality: { only_integer: true }
